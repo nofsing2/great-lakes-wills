@@ -1,0 +1,31 @@
+{
+  "name": "great-lakes-wills",
+  "version": "1.0.0",
+  "description": "Great Lakes Wills & Estate: Michigan estate planning questionnaire with attorney review",
+  "main": "server.js",
+  "scripts": {
+    "start": "node --no-warnings server.js",
+    "dev": "PGLITE_DIR=./data/pglite node --no-warnings --watch server.js",
+    "test": "node --test --no-warnings --test-concurrency=1 test/*.test.js",
+    "build-demo": "node scripts/build-demo.mjs"
+  },
+  "author": "Truckey Nofsinger, LLP",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "@supabase/supabase-js": "^2.118.0",
+    "docx": "^9.13.0",
+    "express": "^4.22.3",
+    "pdfkit": "^0.15.2",
+    "pg": "^8.23.1",
+    "qrcode": "^1.5.4"
+  },
+  "type": "module",
+  "devDependencies": {
+    "@electric-sql/pglite": "^0.2.17",
+    "esbuild": "^0.24.2"
+  },
+  "engines": {
+    "node": "22.x"
+  },
+  "private": true
+}
