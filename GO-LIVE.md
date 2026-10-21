@@ -89,7 +89,10 @@ Open `https://www.DOMAIN/healthz`. It should say `{"ok":true}`. If it lists `mis
 2. Copy the **live** secret key, add a **live** webhook with the same URL and event, update both settings in Vercel, and redeploy.
 3. Place one real order with your own card, then decline it to refund.
 
-## 11. Soft launch, then announce
+## 11. Open the site to the public
+The whole site is behind a preview password (proxy.js) until launch; Stripe's payment notices and /healthz stay open. To launch: Vercel → Settings → Environment Variables → add `PREVIEW_GATE` = `off` (Production) → redeploy. To change the preview password instead, set `PREVIEW_PASSWORD_SHA256` to the SHA-256 hex of `glw-preview:` + the new password.
+
+## 12. Soft launch, then announce
 - Two or three friendly clients first; fix anything confusing.
 - Google Business Profile listing the website; tell referral sources.
 
