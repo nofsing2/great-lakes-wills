@@ -4,6 +4,8 @@ The site runs on the same services as Guideline Desk: **GitHub** (code) → **Ve
 
 Follow in order. About two hours, most of it waiting on DNS.
 
+**Status (Oct. 21, 2026):** steps 1–5 done. Domains greatlakeswills.com and greatlakeswillsandestate.com (Vercel, auto-renew); site at **https://www.greatlakeswills.com** (the other names redirect there). Supabase project `great-lakes-wills` (ref `mnwgsetzquwwddgsmnyd`, org Truckey Nofsinger, LLP, Pro, us-east-1). Resend domain greatlakeswills.com verified. Remaining: Stripe (step 6) and the checks after it.
+
 ## 0. Before anything is public (you)
 - [x] Engagement agreement, privacy policy, terms, and sample package reviewed (Oct. 2026).
 - [ ] Partner approval; malpractice carrier confirms coverage for an online limited-scope practice; cyber liability quote.
@@ -20,7 +22,8 @@ Create an **empty private** repository named `great-lakes-wills` under `nofsing2
    Use the **Pro plan** for this project: daily backups, and free projects pause after a week without visits.
 2. **Project Settings → API Keys**: copy the **Project URL**, the **publishable** key (older projects call it `anon`), and the **secret** key (older: `service_role`). The secret key goes only into Vercel, never into any web page.
 3. **Connect** (top of the dashboard) → **Connection string** → **Transaction pooler**. Copy the URI and put your database password into it. This is `DATABASE_URL`.
-4. **Authentication → Sign In / Providers → Email**: Email enabled, **Confirm email** on, **Email OTP Expiration** `600` seconds, **Email OTP Length** `6`.
+4. **Authentication → Sign In / Providers → Email**: Email enabled, **Confirm email** on, **Email OTP Expiration** `600` seconds, **Email OTP Length** `6` (Supabase's default is 8).
+   When creating the project, turn **Data API off**: the site's server talks to Postgres directly, so the public table API isn't needed.
 5. **Authentication → Emails → Templates**: edit both **Magic Link** and **Confirm signup** so they send a code instead of a link:
    - Subject: `Your Great Lakes Wills & Estate sign-in code`
    - Body:
@@ -47,7 +50,7 @@ Emails go out from `notices@DOMAIN`; replies go to luke@truckeynofsinger.com. Th
 
 | Name | Value |
 |---|---|
-| `DATABASE_URL` | Supabase transaction pooler URI, with password (step 3.3) |
+| `DATABASE_URL` | `postgresql://postgres.<project-ref>:<password>@aws-0-us-east-1.pooler.supabase.com:6543/postgres` (Supabase's shared pooler; the "dedicated pooler" address the Connect panel shows first is IPv6-only and won't work from Vercel) |
 | `SUPABASE_URL` | Supabase Project URL, e.g. `https://abcd1234.supabase.co` |
 | `SUPABASE_ANON_KEY` | Supabase publishable (anon) key |
 | `SUPABASE_SERVICE_ROLE_KEY` | Supabase secret (service_role) key |
@@ -57,21 +60,21 @@ Emails go out from `notices@DOMAIN`; replies go to luke@truckeynofsinger.com. Th
 | `ATTORNEY_EMAILS` | `luke@truckeynofsinger.com` (comma-separate to add a reviewing attorney) |
 | `STRIPE_SECRET_KEY` | `sk_test_…` for now (step 6) |
 | `STRIPE_WEBHOOK_SECRET` | `whsec_…` (step 6) |
-| `BASE_URL` | `https://DOMAIN` (no trailing slash) |
+| `BASE_URL` | `https://www.DOMAIN` (no trailing slash; Vercel serves the www name and redirects the bare domain to it) |
 | `NODEJS_HELPERS` | `0` (passes Stripe's payment notices through untouched so their signature checks) |
 
 3. **Deploy**. Then **Settings → Domains**: add `DOMAIN` and `www.DOMAIN` and add the DNS records Vercel shows. HTTPS is automatic.
 
 ## 6. Stripe (start in test mode)
 1. **Developers → API keys**: copy the **test** secret key into `STRIPE_SECRET_KEY`.
-2. **Developers → Webhooks → Add destination**: endpoint `https://DOMAIN/api/stripe/webhook`, event `checkout.session.completed`. Copy its signing secret into `STRIPE_WEBHOOK_SECRET`.
+2. **Developers → Webhooks → Add destination**: endpoint `https://www.DOMAIN/api/stripe/webhook`, event `checkout.session.completed`. Copy its signing secret into `STRIPE_WEBHOOK_SECRET`.
 3. Vercel → **Deployments → Redeploy** so the new settings take effect.
 
 ## 7. Check the setup
-Open `https://DOMAIN/healthz`. It should say `{"ok":true}`. If it lists `missing` settings, add them in Vercel and redeploy; until then the site shows "being set up" instead of taking orders.
+Open `https://www.DOMAIN/healthz`. It should say `{"ok":true}`. If it lists `missing` settings, add them in Vercel and redeploy; until then the site shows "being set up" instead of taking orders.
 
 ## 8. First attorney sign-in (you)
-1. Go to `https://DOMAIN/app.html#/login`, enter luke@truckeynofsinger.com, and type the emailed code.
+1. Go to `https://www.DOMAIN/app.html#/login`, enter luke@truckeynofsinger.com, and type the emailed code.
 2. You'll be asked to **turn on two-step sign-in**: scan the QR code with an authenticator app (Google Authenticator, Microsoft Authenticator, 1Password). Client files stay hidden until this is on. From then on you sign in with the emailed code plus the app's code.
 3. In the review queue, click **Export all data** to confirm exports work.
 
