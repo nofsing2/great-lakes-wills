@@ -1,22 +1,46 @@
-// Landing page: prices, firm details, and the "without a will" calculator.
+// Home page: prices and firm details from the shared constants, the situation tabs,
+// and the "without a will" calculator.
 import { intestateShares } from '/engine/intestacy.js';
-import { FEES, firmLines } from '/engine/constants.js';
-import { priceText } from '/engine/util.js';
-import { money } from '/engine/util.js';
+import { FEES, FIRM, firmLines } from '/engine/constants.js';
+import { money, priceText } from '/engine/util.js';
 
 document.querySelectorAll('[data-price]').forEach((el) => {
   const [pkg, size] = el.dataset.price.split('.');
   el.textContent = money(FEES[pkg][size]);
 });
-document.getElementById('firm-line').textContent = firmLines().join(', ');
 document.querySelectorAll('[data-fee]').forEach((el) => { el.textContent = priceText(FEES[el.dataset.fee]); });
-document.getElementById('fee-deposit').textContent = FEES.depositService
-  ? `${money(FEES.depositService + FEES.depositCourtFee)} per will, including the court’s ${money(FEES.depositCourtFee)} fee`
-  : `Only the court’s ${money(FEES.depositCourtFee)} fee per will`;
-document.getElementById('fee-courtesy').textContent = FEES.courtesyMail || FEES.courtesyEmail
-  ? `${priceText(FEES.courtesyMail)} by mail, ${priceText(FEES.courtesyEmail)} by email`
-  : 'No charge, by mail or email';
+document.getElementById('firm-line').textContent = firmLines().join(', ');
+document.getElementById('review-days').textContent = String(FIRM.reviewDays);
 
+// ---------- Situation tabs (WAI-ARIA tabs pattern) ----------
+const tabs = [...document.querySelectorAll('[role="tab"]')];
+function select(tab, focus) {
+  tabs.forEach((t) => {
+    const on = t === tab;
+    t.setAttribute('aria-selected', String(on));
+    t.tabIndex = on ? 0 : -1;
+    document.getElementById(t.getAttribute('aria-controls')).hidden = !on;
+  });
+  if (focus) tab.focus();
+  try { sessionStorage.setItem('glw-situation', tab.id); } catch { /* storage unavailable */ }
+}
+tabs.forEach((t, i) => {
+  t.addEventListener('click', () => select(t, false));
+  t.addEventListener('keydown', (e) => {
+    const k = { ArrowRight: 1, ArrowDown: 1, ArrowLeft: -1, ArrowUp: -1 }[e.key];
+    if (k) { e.preventDefault(); select(tabs[(i + k + tabs.length) % tabs.length], true); }
+    if (e.key === 'Home') { e.preventDefault(); select(tabs[0], true); }
+    if (e.key === 'End') { e.preventDefault(); select(tabs[tabs.length - 1], true); }
+  });
+});
+// Deep links from ads or flyers: /#surgery, /#parents, /#retirement, /#land
+const fromHash = { '#parents': 't-parents', '#surgery': 't-health', '#retirement': 't-retire', '#land': 't-land', '#farm': 't-land' }[location.hash];
+let saved = null;
+try { saved = sessionStorage.getItem('glw-situation'); } catch { /* storage unavailable */ }
+const start = document.getElementById(fromHash || saved || 't-parents');
+if (start) select(start, false);
+
+// ---------- Calculator ----------
 const $ = (id) => document.getElementById(id);
 function update() {
   const spouse = $('c-spouse').value === 'yes';
