@@ -3,220 +3,197 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Great Lakes Wills &amp; Estate — Michigan wills approved by a local attorney</title>
+<title>Great Lakes Wills &amp; Estate: Michigan wills approved by a local attorney</title>
 <meta name="description" content="Michigan wills, powers of attorney and patient advocate designations, written from your answers and approved by a Three Rivers attorney. One flat fee.">
+<meta name="theme-color" content="#F6F1E8">
 <link rel="stylesheet" href="/home.css">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230b4f8a'/%3E%3Cpath d='M7 20c3-2 6-2 9 0s6 2 9 0' stroke='white' stroke-width='2.4' fill='none'/%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230B1B2E'/%3E%3Cpath d='M6 19c3.3-2 6.7-2 10 0s6.7 2 10 0' stroke='%238DBDF0' stroke-width='2.4' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 
-<div class="utility">
+<header class="top" id="top">
   <div class="wrap">
-    <span>Michigan wills and estate plans, reviewed by a Three Rivers attorney</span>
-    <span>Questions? <a href="tel:+12692735657">(269) 273-5657</a></span>
-  </div>
-</div>
-
-<header class="top">
-  <div class="wrap">
-    <a class="brand" href="/">
-      <svg width="32" height="32" viewBox="0 0 30 30" aria-hidden="true"><rect width="30" height="30" rx="8" fill="#0b4f8a"/><path d="M6 17c3-3 6-3 9 0s6 3 9 0M6 12c3-3 6-3 9 0s6 3 9 0" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
-      Great Lakes Wills &amp; Estate
+    <a class="brand" href="/" aria-label="Great Lakes Wills &amp; Estate, home">
+      <!-- Stand-in lettering; replace with svg/logo-horizontal-color.svg from the logo kit. -->
+      <svg class="logo" viewBox="0 0 330 44" aria-hidden="true"><defs><clipPath id="wl"><path d="M0 0H330V25C310 22.5 290 27.5 270 25S230 22.5 210 25 170 27.5 150 25 110 22.5 90 25 50 27.5 30 25 10 22.5 0 25Z"/></clipPath></defs><text x="0" y="31" font-family="Fraunces, Georgia, serif" font-weight="700" font-size="30" letter-spacing="-.5" fill="#2F6FB5">great lakes</text><text x="0" y="31" font-family="Fraunces, Georgia, serif" font-weight="700" font-size="30" letter-spacing="-.5" fill="#0B1B2E" clip-path="url(#wl)">great lakes</text><text x="170" y="31" font-family="Fraunces, Georgia, serif" font-weight="400" font-size="21" fill="#2F6FB5">wills &amp; estate</text></svg>
     </a>
     <nav aria-label="Main">
       <a href="#how">How it works</a>
       <a href="#pricing">Pricing</a>
       <a href="#faq">Questions</a>
       <a href="/app.html#/login">Sign in</a>
-      <a class="cta" href="/app.html#/register">Start</a>
+      <a class="btn small" href="/app.html#/register">Start my plan</a>
     </nav>
   </div>
 </header>
 
 <main id="main">
-  <section class="hero">
-    <div class="wrap">
-      <h1>Your Michigan will and estate plan, written from your answers and approved by a local attorney.</h1>
-      <p class="lede">One flat fee. About 30 minutes online. Luke Nofsinger, a Michigan attorney in Three Rivers, reads every document before you sign.</p>
-      <p class="ask" id="ask">What brings you here?</p>
-      <div class="tabs" role="tablist" aria-labelledby="ask">
-        <button type="button" role="tab" id="t-parents" aria-controls="p-parents" aria-selected="true">I have kids</button>
-        <button type="button" role="tab" id="t-health" aria-controls="p-health" aria-selected="false" tabindex="-1">Surgery or a diagnosis</button>
-        <button type="button" role="tab" id="t-retire" aria-controls="p-retire" aria-selected="false" tabindex="-1">Planning for retirement</button>
-        <button type="button" role="tab" id="t-land" aria-controls="p-land" aria-selected="false" tabindex="-1">Home, land or farm</button>
+  <!-- 1. Hero: layered lake scene, documents between the planes -->
+  <section class="hero" data-act aria-labelledby="hero-h">
+    <div class="stage">
+      <div class="plane sky" aria-hidden="true"></div>
+      <div class="plane far" data-depth="0.12" aria-hidden="true">
+        <svg viewBox="0 0 1440 400" preserveAspectRatio="none">
+          <path d="M0 150 C 180 120 320 140 470 128 S 760 104 900 122 1180 110 1440 126 V400 H0Z" fill="#C9D3D1"/>
+          <path d="M0 176 H1440 V400 H0Z" fill="#B7CAD8"/>
+          <path d="M0 176 H1440 V184 H0Z" fill="#9FB8CC"/>
+          <g stroke="#E9EEF0" stroke-width="2" opacity=".7"><path d="M120 220h90M420 248h140M820 232h60M1060 262h150M260 300h120M980 320h90"/></g>
+        </svg>
+      </div>
+      <div class="copy"><div class="wrap">
+        <h1 id="hero-h">Who gets the house. <em>Who raises the kids.</em> Who decides if you can’t.</h1>
+        <p class="lede">Write it down in about 30 minutes. Luke Nofsinger, a Michigan attorney in Three Rivers, reads every page before you sign.</p>
+        <div class="row"><a class="btn" href="/app.html#/register">Start my plan</a><span class="note">One flat fee, from <span data-price="will.single"></span></span></div>
+      </div></div>
+      <div class="papers" aria-hidden="true">
+        <div class="paper" data-paper="2"><p class="t">Patient Advocate Designation</p><p class="s">MCL 700.5506</p><i></i><i class="s3"></i><i class="s2"></i><i></i><i class="s4"></i><i></i><i class="s3"></i><i class="s2"></i><b>Patient</b></div>
+        <div class="paper" data-paper="1"><p class="t">Durable Power of Attorney</p><p class="s">Michigan statutory form</p><i></i><i class="s2"></i><i class="s3"></i><i></i><i class="s4"></i><i></i><i class="s2"></i><i class="s3"></i><b>Principal</b></div>
+        <div class="paper" data-paper="0"><p class="t">Last Will and Testament</p><p class="s">State of Michigan</p><i></i><i class="s3"></i><i></i><i class="s2"></i><i class="s3"></i><i class="s4"></i><i></i><i class="s3"></i><i class="s2"></i><i></i><i class="s4"></i><b>Testator</b></div>
+      </div>
+      <div class="plane near" data-depth="0.5" aria-hidden="true">
+        <svg viewBox="0 0 1440 200" preserveAspectRatio="none">
+          <path d="M0 120 C 200 90 380 130 600 112 S 980 84 1200 108 1360 118 1440 104 V200 H0Z" fill="#33485C"/>
+          <g stroke="#33485C" stroke-width="3" stroke-linecap="round" fill="none"><path d="M80 120 C 84 70 90 50 96 20M110 118 C 112 80 118 60 126 40M1300 110 C 1296 70 1290 50 1282 24M1330 112 C 1330 76 1336 56 1344 36M640 112 C 642 80 646 66 652 48"/></g>
+        </svg>
       </div>
     </div>
   </section>
 
-  <section class="panels">
-    <div class="wrap">
-      <div class="panel" id="p-parents" role="tabpanel" aria-labelledby="t-parents">
-        <div class="copy">
-          <p class="kicker">For parents</p>
-          <h2>Name who would raise your children.</h2>
-          <p class="body">Without a will, a Michigan judge decides. Choose a guardian and a backup, and have money for your kids held in trust until the ages you pick.</p>
-          <div class="actions"><a class="btn" href="/app.html#/register">Name a guardian</a><span class="price-note">Couples from <span data-price="will.couple"></span></span></div>
-        </div>
-        <div class="gets"><p>What you'll get</p>
-          <ul>
-            <li><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>A guardian and a backup, in writing</li>
-            <li><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Money held in trust, not handed over at 18</li>
-            <li><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Matching wills for you and your spouse</li>
-            <li><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Health and financial papers for both of you, in the complete plan</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="panel" id="p-health" role="tabpanel" aria-labelledby="t-health" hidden>
-        <div class="copy">
-          <p class="kicker">Before a procedure</p>
-          <h2>Decide who speaks for you, before your surgery date.</h2>
-          <p class="body">Hospitals ask for a patient advocate designation. Banks ask for a power of attorney. Get both under Michigan law. Add rush review and the attorney reviews your plan within one business day.</p>
-          <div class="actions"><a class="btn" href="/app.html#/register">Start my health documents</a><span class="price-note">Complete plan <span data-price="complete.single"></span> · rush <span data-fee="rushReview"></span></span></div>
-        </div>
-        <div class="gets"><p>What you'll get</p>
-          <ul>
-            <li><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Patient advocate designation, with the acceptance form</li>
-            <li><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Michigan's statutory power of attorney</li>
-            <li><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>A HIPAA release so doctors can talk to your family</li>
-            <li><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Your will, done at the same time</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="panel" id="p-retire" role="tabpanel" aria-labelledby="t-retire" hidden>
-        <div class="copy">
-          <p class="kicker">For retirees and their families</p>
-          <h2>Put your wishes in writing, at your own pace.</h2>
-          <p class="body">Answer online, or with a son or daughter beside you. Prefer to talk it through first? Call our Three Rivers office.</p>
-          <div class="actions"><a class="btn" href="/app.html#/register">Start my plan</a><a href="tel:+12692735657" class="price-note">Or call (269) 273-5657</a></div>
-        </div>
-        <div class="gets"><p>What you'll get</p>
-          <ul>
-            <li><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>A will for your home, savings and keepsakes</li>
-            <li><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Who handles bills and medical decisions if you can't</li>
-            <li><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Your original will filed with the probate court; we handle it, the court charges <span data-fee="depositCourtFee"></span></li>
-            <li><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>A letter to each person you name, explaining their role, free</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="panel" id="p-land" role="tabpanel" aria-labelledby="t-land" hidden>
-        <div class="copy">
-          <p class="kicker">For rural Michigan families</p>
-          <h2>The house, the land, the trucks. Say who gets what.</h2>
-          <p class="body">Leave the land to one child and cash to another, or let your spouse stay on. Run the farm as a business, or hold land in an LLC or another state? The questionnaire flags it and we recommend a consultation before you pay.</p>
-          <div class="actions"><a class="btn" href="/app.html#/register">Start my will</a><span class="price-note">Wills from <span data-price="will.single"></span></span></div>
-        </div>
-        <div class="gets"><p>What you'll get</p>
-          <ul>
-            <li><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Who receives your home and acreage</li>
-            <li><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>A separate list for tools, trucks and firearms you can update yourself</li>
-            <li><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>A power of attorney if you're laid up at harvest</li>
-            <li><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>An honest flag when you need more than a flat-fee plan</li>
-          </ul>
-        </div>
+  <!-- 2. Situations: sideways pan on wide screens, swipe on phones -->
+  <section class="sits" data-act id="situations" aria-labelledby="sits-h">
+    <div class="stage">
+      <div class="wrap"><h2 id="sits-h">Start with <em>what brought you here.</em></h2></div>
+      <div class="track" id="track">
+        <article class="sit" id="parents">
+          <p class="k">For parents</p>
+          <h3>Name who would raise your children.</h3>
+          <p>Without a will, a Michigan judge decides. Choose a guardian and a backup, and keep money in trust until the ages you pick.</p>
+          <ul><li>A guardian and a backup, in writing</li><li>Money held in trust, not handed over at 18</li><li>Matching wills for you and your spouse</li><li>Health and financial papers for both of you, in the complete plan</li></ul>
+          <p class="price-note">Couples from <span data-price="will.couple"></span></p>
+          <a href="/app.html#/register">Name a guardian</a>
+        </article>
+        <article class="sit" id="surgery">
+          <p class="k">Before a procedure</p>
+          <h3>Decide who speaks for you before the surgery date.</h3>
+          <p>Hospitals ask for a patient advocate designation. Banks ask for a power of attorney. Add rush review and the attorney reviews your plan within one business day.</p>
+          <ul><li>Patient advocate designation, with the acceptance form</li><li>Michigan’s statutory power of attorney</li><li>A HIPAA release so doctors can talk to your family</li><li>Your will, done at the same time</li></ul>
+          <p class="price-note">Complete plan <span data-price="complete.single"></span> · rush <span data-fee="rushReview"></span></p>
+          <a href="/app.html#/register">Start my health documents</a>
+        </article>
+        <article class="sit" id="retirement">
+          <p class="k">Retirees and their families</p>
+          <h3>Put your wishes in writing, at your own pace.</h3>
+          <p>Answer online, or with a son or daughter beside you. Prefer to talk it through first? Call our Three Rivers office at <a class="tel" href="tel:+12692735657">(269) 273-5657</a>.</p>
+          <ul><li>A will for your home, savings and keepsakes</li><li>Who handles bills and medical decisions if you can’t</li><li>Your original will filed with the probate court; we handle it, the court charges <span data-fee="depositCourtFee"></span></li><li>A letter to each person you name, explaining their role, free</li></ul>
+          <a href="/app.html#/register">Start my plan</a>
+        </article>
+        <article class="sit" id="land">
+          <p class="k">Home, land or farm</p>
+          <h3>The house, the land, the trucks. Say who gets what.</h3>
+          <p>Leave the land to one child and cash to another, or let your spouse stay on. Farm run as a business, or land in an LLC or another state? The questionnaire flags it and we recommend a consultation before you pay.</p>
+          <ul><li>Who receives your home and acreage</li><li>A separate list for tools, trucks and firearms you can update yourself</li><li>A power of attorney if you’re laid up at harvest</li><li>An honest flag when you need more than a flat-fee plan</li></ul>
+          <p class="price-note">Wills from <span data-price="will.single"></span></p>
+          <a href="/app.html#/register">Start my will</a>
+        </article>
       </div>
     </div>
   </section>
 
-  <section class="how" id="how">
-    <div class="wrap">
-      <h2>How it works</h2>
-      <ol>
-        <li><p class="when">About 30 minutes</p><h3>Answer plain questions</h3><p>On your phone or computer. Save and come back anytime. A family member can sit with you.</p></li>
-        <li><p class="when">Within <span id="review-days"></span> business days</p><h3>An attorney reviews it</h3><p>Luke reads every page and calls you if anything needs a conversation. If he can't take your plan, you get a full refund.</p></li>
-        <li><p class="when">When you're ready</p><h3>Sign with witnesses</h3><p>Download your approved documents with step-by-step signing instructions for your witnesses and notary.</p></li>
-        <li><p class="when">Afterward, if you choose</p><h3>We keep it safe</h3><p>We file your will with your county probate court and mail a letter to each person you name.</p></li>
+  <div class="hush"><p>Here’s what happens if you never get around to it.</p></div>
+
+  <!-- 3. The peak: Michigan's formula, then the pen goes back to you -->
+  <section class="peak" data-act id="peak" aria-labelledby="peak-h">
+    <div class="stage"><div class="wrap grid">
+      <div>
+        <div class="swap">
+          <h2 id="peak-h" class="h-a">Without a will,<br><span class="who"><span class="mi">Michigan</span></span> decides.</h2>
+          <p class="h-b" aria-hidden="true">With a will,<br><em>you</em> decide.</p>
+        </div>
+        <div class="swap">
+          <p class="setup s-a">Say you’re married with two young children, and everything you own comes to $500,000. Keep scrolling and watch the formula in Michigan’s intestacy law work.</p>
+          <p class="setup s-b">Now try it with your own family. The numbers use Michigan’s <span data-law-year></span> amounts and count only what passes through probate.</p>
+        </div>
+      </div>
+      <div class="ledger">
+        <div class="total"><span>Your estate</span><b id="tot">$500,000</b></div>
+        <div class="bar" id="bar" role="img" aria-label=""><span class="sp"></span><span class="ch"></span><span class="ot"></span></div>
+        <ol class="notes" id="notes">
+          <li data-at=".12"><i class="dot sp"></i><p>Your spouse takes the first <b data-epic="intestateSpouseHigh"></b>.<cite>MCL 700.2102(1)(b), <span data-law-year></span> amount</cite></p></li>
+          <li data-at=".3"><i class="dot sp"></i><p>Then half of what’s left: another <b id="n-half"></b>.<cite>MCL 700.2102(1)(b)</cite></p></li>
+          <li data-at=".46"><i class="dot ch"></i><p>Your children split the other <b id="n-kids"></b>. Young children usually need a court-appointed conservator to hold it, and at 18 it’s theirs outright.<cite>MCL 700.2103</cite></p></li>
+          <li data-at=".62"><i class="dot cl"></i><p>No one is named to raise them if you both die. A judge picks.<cite>MCL 700.5202</cite></p></li>
+          <li data-at=".78"><i class="dot nv"></i><p><b>With a will, you choose:</b> everything to your spouse, a trust for the kids until the age you pick, and the guardian you trust.</p></li>
+        </ol>
+        <div class="try" id="try">
+          <div class="f">
+            <label>Married<select id="c-spouse"><option value="yes">Yes</option><option value="no">No</option></select></label>
+            <label>Estate<select id="c-estate"><option value="250000">$250,000</option><option value="500000" selected>$500,000</option><option value="1000000">$1 million</option><option value="2000000">$2 million</option></select></label>
+            <label><span class="field-label">Kids together</span><select id="c-own"><option>0</option><option>1</option><option selected>2</option><option>3</option><option>4</option></select></label>
+            <label><span class="field-label">Other kids</span><select id="c-other"><option selected>0</option><option>1</option><option>2</option><option>3</option></select></label>
+            <label id="c-parent-wrap" hidden>A parent living<select id="c-parent"><option value="no">No</option><option value="yes">Yes</option></select></label>
+          </div>
+          <p class="calc-out" id="c-out" aria-live="polite"></p>
+          <p class="rule" id="c-rule"></p>
+        </div>
+      </div>
+    </div></div>
+  </section>
+
+  <!-- 4. Luke -->
+  <section class="luke" data-act aria-labelledby="luke-h">
+    <div class="wrap"><article class="letter">
+      <div class="head"><img src="/img/luke-nofsinger.jpeg" alt="Luke Nofsinger" width="92" height="92"><p><b>Luke Nofsinger</b>Attorney, Truckey Nofsinger, LLP<br>P79495 · Past president, St. Joseph County Bar Association</p></div>
+      <h2 id="luke-h">I read every page before you sign it.</h2>
+      <div class="body">
+        <p>The questions you answer online turn into documents written for Michigan law. Then they come to my desk in Three Rivers, and I read them the way I would for a client sitting across from me.</p>
+        <p>If something needs a conversation, I call you. If your situation needs more than a flat-fee plan, I tell you before you pay. If I can’t take your plan, you get a full refund.</p>
+      </div>
+      <!-- Placeholder stroke; replace the path with a trace of Luke's signature. -->
+      <svg class="sign" viewBox="0 0 260 86" aria-hidden="true"><path id="sig" d="M10 60 C 20 20 30 14 34 30 S 26 70 40 62 58 30 62 44 66 66 78 56 90 34 96 48 104 64 116 52 128 30 134 46 140 64 154 50 168 34 172 46 176 60 190 52 206 40 214 50 222 58 236 50"/></svg>
+      <p class="addr">38 N. Main St., Three Rivers, Michigan 49093 · <a href="tel:+12692735657">(269) 273-5657</a></p>
+    </article></div>
+  </section>
+
+  <!-- 5. How it works -->
+  <section class="how" data-act id="how" aria-labelledby="how-h">
+    <div class="stage"><div class="wrap">
+      <h2 id="how-h">Four steps, mostly from your kitchen table.</h2>
+      <ol class="rail" id="rail">
+        <li class="step"><p class="w">About 30 minutes</p><h3>Answer plain questions</h3><p>On your phone or computer. Save and come back anytime. A family member can sit with you.</p></li>
+        <li class="step"><p class="w">Within <span id="review-days"></span> business days</p><h3>An attorney reviews it</h3><p>Luke reads every page and calls you if anything needs a conversation. If he can’t take your plan, you get a full refund.</p></li>
+        <li class="step"><p class="w">When you’re ready</p><h3>Sign with witnesses</h3><p>Download your approved documents with step-by-step signing instructions for your witnesses and notary.</p></li>
+        <li class="step"><p class="w">Afterward, if you choose</p><h3>We keep it safe</h3><p>We file your will with your county probate court and mail a letter to each person you name.</p></li>
       </ol>
-    </div>
+    </div></div>
   </section>
 
-  <section class="section">
-    <div class="wrap calc-wrap">
-      <div class="intro">
-        <h2 id="calc-h">Without a will, Michigan decides</h2>
-        <p>Michigan's intestacy law (MCL 700.2102–.2103) divides your estate by a formula, whatever you would have wanted. Try it with your family.</p>
-      </div>
-      <div class="calc" aria-labelledby="calc-h">
-        <div class="row">
-          <label class="field">Married?
-            <select id="c-spouse"><option value="yes">Yes</option><option value="no">No</option></select></label>
-          <label class="field">Estate value
-            <select id="c-estate"><option value="250000">$250,000</option><option value="500000" selected>$500,000</option><option value="1000000">$1,000,000</option><option value="2000000">$2,000,000</option></select></label>
-        </div>
-        <div class="row">
-          <label class="field"><span class="field-label">Children with spouse</span>
-            <select id="c-own"><option>0</option><option selected>2</option><option>1</option><option>3</option><option>4</option></select></label>
-          <label class="field"><span class="field-label">Other children</span>
-            <select id="c-other"><option selected>0</option><option>1</option><option>2</option><option>3</option></select></label>
-        </div>
-        <label class="field" id="c-parent-wrap">A parent of yours is living
-          <select id="c-parent"><option value="no">No</option><option value="yes">Yes</option></select></label>
-        <div class="bar" role="img" id="c-bar" aria-label=""><div class="s"></div><div class="d"></div><div class="o"></div></div>
-        <div class="legend"><span><i style="background:#0b4f8a"></i>Spouse</span><span><i style="background:#2f6b4f"></i>Children</span><span><i style="background:#6b7a88"></i>Parents or other relatives</span></div>
-        <p class="calc-out" id="c-out" aria-live="polite"></p>
-        <p class="small" id="c-rule"></p>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="pricing" style="padding-top: 0;">
+  <!-- 6. Price -->
+  <section class="price" id="pricing" aria-labelledby="price-h">
     <div class="wrap">
-      <h2>One flat fee. Attorney review included.</h2>
-      <p class="sub">No subscription and no hourly billing. You see the price before you check out.</p>
-      <div class="prices">
-        <div class="price">
-          <h3>Will</h3>
-          <div class="amt" data-price="will.single"></div>
-          <p class="small">Married couple: <span data-price="will.couple"></span></p>
-          <ul>
-            <li>Last will and testament, self-proved</li>
-            <li>Guardian for minor children</li>
-            <li>Trusts for children until the age you choose</li>
-            <li>Personal belongings list</li>
-          </ul>
-        </div>
-        <div class="price best">
-          <h3>Complete plan <span class="badge">Most chosen</span></h3>
-          <div class="amt" data-price="complete.single"></div>
-          <p class="small">Married couple: <span data-price="complete.couple"></span></p>
-          <ul>
-            <li>Everything in the will plan</li>
-            <li>Durable power of attorney on Michigan's statutory form</li>
-            <li>Patient advocate designation with your end-of-life wishes</li>
-            <li>HIPAA authorization and funeral representative designation</li>
-          </ul>
-        </div>
+      <div class="intro"><h2 id="price-h">One flat fee. The attorney is included.</h2><p>No subscription and no hourly billing. You see the price before you check out.</p></div>
+      <div class="cards">
+        <div class="pc"><h3>Will</h3><p class="amt" data-price="will.single"></p><p class="cpl">Married couple <span data-price="will.couple"></span></p>
+          <ul><li>Last will and testament, self-proved</li><li>Guardian for minor children</li><li>Trusts for children until the age you choose</li><li>Personal belongings list</li></ul>
+          <a class="btn ghost" href="/app.html#/register">Start my will</a></div>
+        <div class="pc best"><h3>Complete plan <span class="badge">Most chosen</span></h3><p class="amt" data-price="complete.single"></p><p class="cpl">Married couple <span data-price="complete.couple"></span></p>
+          <ul><li>Everything in the will plan</li><li>Durable power of attorney on Michigan’s statutory form</li><li>Patient advocate designation with your end-of-life wishes</li><li>HIPAA authorization and funeral representative designation</li></ul>
+          <a class="btn" href="/app.html#/register">Start my plan</a></div>
       </div>
-      <p class="fineprint">Rush review (one business day): <span data-fee="rushReview"></span>. Filing your will with the probate court: we handle it free; the court charges <span data-fee="depositCourtFee"></span> per will. Courtesy letters to the people you name: free.</p>
+      <p class="fine">Rush review (one business day): <span data-fee="rushReview"></span>. Filing your will with the probate court: we handle it free; the court charges <span data-fee="depositCourtFee"></span> per will. Courtesy letters to the people you name: free.</p>
     </div>
   </section>
 
-  <section class="attorney">
-    <div class="wrap">
-      <figure>
-        <img src="/img/luke-nofsinger.jpeg" alt="Luke Nofsinger" width="240" height="240">
-        <figcaption><strong>Luke Nofsinger</strong>Attorney · Truckey Nofsinger, LLP</figcaption>
-      </figure>
-      <div class="bio">
-        <h2>A real attorney, down the street</h2>
-        <p>Great Lakes Wills &amp; Estate is the online estate planning practice of Truckey Nofsinger, LLP in Three Rivers. Your plan is reviewed by Luke Nofsinger, a Michigan attorney (P79495) and past president of the St. Joseph County Bar Association.</p>
-        <p><strong>38 N. Main St., Three Rivers, Michigan 49093 · <a href="tel:+12692735657">(269) 273-5657</a></strong></p>
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="wrap fit">
+  <!-- Fit and questions -->
+  <section class="fit" aria-label="Who this is for">
+    <div class="wrap cols">
       <div>
         <h2>A good fit if you</h2>
         <ul>
           <li>Live in Michigan and plan to stay</li>
           <li>Want to leave things to a spouse, children, relatives or charities</li>
           <li>Need to name a guardian for young children</li>
-          <li>Want someone you trust to handle money and medical decisions if you can't</li>
+          <li>Want someone you trust to handle money and medical decisions if you can’t</li>
         </ul>
       </div>
       <div>
@@ -226,30 +203,36 @@
           <li>A beneficiary on SSI or Medicaid, or nursing-home planning</li>
           <li>A living trust, a business or farm business, or property in another state</li>
         </ul>
-        <p class="small">The questionnaire spots these and offers a consultation instead of charging you for a plan that won't fit.</p>
+        <p class="small">The questionnaire spots these and offers a consultation instead of charging you for a plan that won’t fit.</p>
       </div>
     </div>
   </section>
 
-  <section class="section faq" id="faq" style="padding-top: 0;">
+  <section class="faq" id="faq" aria-labelledby="faq-h">
     <div class="wrap">
-      <h2>Questions</h2>
-      <details><summary>Do I need a will if I don't own much?</summary><p>If you have children, a will is the only way to name their guardian. Without one, Michigan law decides who inherits and a judge appoints someone to handle your estate.</p></details>
+      <h2 id="faq-h">Questions</h2>
+      <details><summary>Do I need a will if I don’t own much?</summary><p>If you have children, a will is the only way to name their guardian. Without one, Michigan law decides who inherits and a judge appoints someone to handle your estate.</p></details>
       <details><summary>Can my son or daughter help me fill it out?</summary><p>Yes, they can read the questions with you. The answers must be yours, so if someone named in your plan helps, the attorney speaks with you privately before approving.</p></details>
       <details><summary>I own a farm, a business, or land in another state.</summary><p>The questionnaire flags it. If you need more than a flat-fee plan, we recommend a consultation before you pay anything.</p></details>
       <details><summary>How fast can it be done before a surgery?</summary><p>Add rush review at checkout and the attorney reviews your plan within one business day. If your date is very close, call us first.</p></details>
-      <details><summary>Is this the same as hiring a lawyer?</summary><p>Yes, for a limited purpose: once the firm accepts your matter after a conflict check, Truckey Nofsinger, LLP represents you for preparing these documents. The engagement terms you see at checkout explain exactly what's included.</p></details>
+      <details><summary>Is this the same as hiring a lawyer?</summary><p>Yes, for a limited purpose: once the firm accepts your matter after a conflict check, Truckey Nofsinger, LLP represents you for preparing these documents. The engagement terms you see at checkout explain exactly what’s included.</p></details>
     </div>
   </section>
 
-  <section class="closing">
-    <div class="wrap">
-      <p>Most people finish in about 30 minutes.</p>
-      <div class="actions">
-        <a class="btn dark" href="/app.html#/register">Start my plan</a>
-        <a class="btn light" href="tel:+12692735657">Call us</a>
+  <!-- 7. Close: the stamp lands and holds -->
+  <section class="close" data-act aria-labelledby="close-h">
+    <div class="stage"><div class="wrap grid">
+      <div>
+        <h2 id="close-h">Then it’s done, <em>and it’s yours.</em></h2>
+        <p class="l">Approved by an attorney, signed at your table, filed with your county’s probate court. Most people finish the questions in about 30 minutes.</p>
+        <div class="row"><a class="btn inv" href="/app.html#/register">Start my plan</a><a class="btn line" href="tel:+12692735657">Call (269) 273-5657</a></div>
       </div>
-    </div>
+      <div class="will" aria-hidden="true">
+        <p class="t">Last Will and Testament</p><p class="s">State of Michigan</p>
+        <i></i><i class="s3"></i><i></i><i class="s2"></i><i></i><i class="s3"></i><i class="s4"></i><i></i><i class="s2"></i>
+        <div class="stamp" id="stamp">APPROVED<small>L. NOFSINGER · P79495</small></div>
+      </div>
+    </div></div>
   </section>
 </main>
 
